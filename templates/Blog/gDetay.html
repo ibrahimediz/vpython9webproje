@@ -11,12 +11,11 @@
     <h1><a href="/">Vektorel</a></h1>
 </div>
 
-{% for gonderi in Gonderiler %}
     <div>
         <p>published: {{ gonderi.yayim_zaman }}</p>
-        <h1><a href="{% url 'gDetay' pk=gonderi.pk %}">{{ gonderi.baslik }}</a></h1>
+        <h1><a href="">{{ gonderi.baslik }}</a></h1>
         <p>{{ gonderi.yazi|linebreaksbr }}</p>
     </div>
-{% endfor %}
+
 </body>
 </html>
