@@ -1,15 +1,7 @@
-{% load static %}
-<html>
-<head>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div>
-    <h1><a href="/">Vektorel</a></h1>
-</div>
+{% extends "../base.html" %}
+{% block title %} Gönderi Listesi {% endblock %}
+
+{% block content %}
 
 {% for gonderi in Gonderiler %}
     <div>
@@ -18,5 +10,5 @@
         <p>{{ gonderi.yazi|linebreaksbr }}</p>
     </div>
 {% endfor %}
-</body>
-</html>
+
+{% endblock %}
