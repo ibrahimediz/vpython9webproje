@@ -1,0 +1,13 @@
+{% extends "../base.html" %}
+{% block title %} Gönderi Detay {% endblock %}
+
+{% block content %}
+<h1>Yeni Gonderi</h1>
+<form method="POST" class="post-from">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit" >Kaydet</button>
+</form>
+
+{% endblock %}
+

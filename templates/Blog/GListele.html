@@ -1,12 +1,21 @@
 {% extends "../base.html" %}
-{% block title %} Gönderi Listesi {% endblock %}
-
+{% load static %}
 {% block content %}
 
 {% for gonderi in Gonderiler %}
     <div>
         <p>published: {{ gonderi.yayim_zaman }}</p>
-        <h1><a href="{% url 'gDetay' pk=gonderi.pk %}">{{ gonderi.baslik }}</a></h1>
+        <h1>
+            <a href="{% url 'gDetay' pk=gonderi.pk %}">
+            {{ gonderi.baslik }}
+        </a>
+        {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'gDuzenle' pk=gonderi.pk %}">
+            <span class="glyphicon glyphicon-pencil"></span>
+
+        </a>
+        {% endif %}
+    </h1>
         <p>{{ gonderi.yazi|linebreaksbr }}</p>
     </div>
 {% endfor %}
