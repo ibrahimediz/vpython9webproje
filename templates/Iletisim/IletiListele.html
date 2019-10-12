@@ -1,0 +1,17 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block content %}
+
+{% for ileti in Iletilerimiz %}
+    <div>
+        <p>Gönderen: {{ ileti.ePosta }}</p>
+        <h1>
+            <a href="{% url 'IletiDetay' pk=ileti.pk %}">
+            {{ ileti.Konu }}
+        </a>
+    </h1>
+        <p>{{ ileti.Mesaj|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+{% endblock %}

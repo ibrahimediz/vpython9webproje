@@ -1,0 +1,14 @@
+
+{% extends "../base.html" %}
+{% block title %} Iletisim Detay {% endblock %}
+
+{% block content %}
+    <div>
+        <p>Gönderen: {{ ileti.ePosta }}</p>
+        <h1><a href="">{{ ileti.Konu }}</a></h1>
+        <p>{{ ileti.Mesaj|linebreaksbr }}</p>
+    </div>
+
+
+{% endblock %}
+
