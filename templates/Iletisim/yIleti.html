@@ -3,7 +3,7 @@
 
 {% block content %}
 <h1>Yeni İleti</h1>
-<form method="POST" class="post-from">
+<form method="POST" enctype="multipart/form-data" class="post-from">
 {% csrf_token %}
 {{ form.as_p }}
 <button type="submit" >Kaydet</button>

@@ -14,7 +14,7 @@ def IletiDetay(request,pk):
 
 def yeniIleti(request):
     if request.method == "POST":
-        form = IletisimForm(request.POST)
+        form = IletisimForm(request.POST, request.FILES)
         if form.is_valid():
             ileti = form.save(commit=False)
             ileti.save()

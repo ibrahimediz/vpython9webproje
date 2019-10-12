@@ -5,6 +5,7 @@
 {% block content %}
     <div>
         <p>Gönderen: {{ ileti.ePosta }}</p>
+        <img src="{{ ileti.resim.url }}">
         <h1><a href="">{{ ileti.Konu }}</a></h1>
         <p>{{ ileti.Mesaj|linebreaksbr }}</p>
     </div>

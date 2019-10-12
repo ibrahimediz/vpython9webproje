@@ -6,6 +6,7 @@ class IletisimModel(models.Model):
     Mesaj = models.TextField()
     ePosta = models.EmailField()
     Zaman = models.DateTimeField(default=timezone.now)
+    resim = models.ImageField(null=True,upload_to='images/')
 
     def __str__(self):
         return self.Konu

@@ -20,8 +20,15 @@
             <div class="tm-brand-container tm-bg-white-transparent">
               <i class="fas fa-2x fa-pen tm-brand-icon"></i>
               <div class="tm-brand-texts">
-                <h1 class="text-uppercase tm-brand-name">Parallo</h1>
-                <p class="small">new app landing page</p>
+                <h1 class="text-uppercase tm-brand-name">Vektörel</h1>
+                {% if user.is_authenticated %}
+                <p class="small">Merhaba {{ user.username }}</p>
+                <a href="{% url 'logout' %}">Çıkış</a>
+                {% else %}
+                <a href="{% url 'login' %}">Giriş</a>/
+                <a href="{% url 'signup' %}">Üye Ol</a>/<br>
+                <a href="{% url 'password_reset' %}">Şifremi Unuttum</a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -45,7 +52,7 @@
                     </li>
                     <li class="nav-item">
                       <div class="tm-nav-link-highlight"></div>
-                      <a class="nav-link" href="services.html">Services</a>
+                      <a class="nav-link" href="{% url 'login' %}">Üyelik</a>
                     </li>
                     <li class="nav-item">
                       <div class="tm-nav-link-highlight"></div>
