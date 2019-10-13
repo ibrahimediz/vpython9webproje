@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Blog.apps.BlogConfig',
     'Iletisim',
     'rest_framework',
-    'apis.app.ApisConfig',
+    'apis.apps.ApisConfig',
     'accounts.apps.AccountsConfig',
     'todolist.apps.TodolistConfig'
 ]
