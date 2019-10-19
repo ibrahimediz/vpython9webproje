@@ -25,7 +25,7 @@ SECRET_KEY = 'ruf2nofow!dwwzm76_b#nq(e1#c&c%le+(h@d%ono3!lbz8!@-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1",'vektorelpython9.pythonanywhere.com']
 
 
 # Application definition
